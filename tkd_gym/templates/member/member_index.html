@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}会员管理{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form name="input" action="new" method="get">
+<input type="submit" value="添加"><br>
+</form>
+<form name="input" action="edit" method="get">
+<input type="submit" value="修改"><br>
+</form>
+<form name="input" action="archive" method="get">
+<input type="submit" value="查看"><br>
+</form>
+<form name="input" action="recover" method="get">
+<input type="submit" value="恢复"><br>
+</form>
+{% endblock %}

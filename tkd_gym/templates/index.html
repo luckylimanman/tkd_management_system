@@ -1,0 +1,18 @@
+{% block header %}
+  <h1>{% block title %}ITF管理系统{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form name="input" action="member" method="get">
+<input type="submit" value="会员管理"><br>
+</form>
+<form name="input" action="gym" method="get">
+<input type="submit" value="道馆管理"><br>
+</form>
+<form name="input" action="roster" method="get">
+<input type="submit" value="考勤管理"><br>
+</form>
+<form name="input" action="exam" method="get">
+<input type="submit" value="考级管理"><br>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form name="input" action="check_in" method="get">
+<input type="submit" value="上课打卡"><br>
+</form>
+<form name="input" action="view_records" method="get">
+<input type="submit" value="查看考勤记录"><br>
+</form>
+{% endblock %}

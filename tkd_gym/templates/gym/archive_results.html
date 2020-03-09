@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>
+{% for get_gym in get_gyms %}
+  {{ get_gym.id }}
+  {{ get_gym.name }}<br>
+{% endfor %}
+</p>
+{% endblock %}

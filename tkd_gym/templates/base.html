@@ -1,0 +1,17 @@
+<!doctype html>
+<h1>ITF管理系统</h1>
+<form name="input" action="/" method="get">
+<input type="submit" value="主页"><br><br><br>
+</form>
+  <head>
+    {% block head %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <title>{% block title %}{% endblock %} ITF_TKD</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>

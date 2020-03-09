@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  <label for="edit_id">输入要修改道馆ID</label>
+  <input name="edit_id" id="edit_id" required><br>
+  <input type="submit" value="查看信息">
+</form>
+{% endblock %}

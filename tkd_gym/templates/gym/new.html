@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  <label for="name">道馆</label>
+  <input name="name" id="name" required><br>
+  <input type="submit" value="添加">
+</form>
+{% endblock %}

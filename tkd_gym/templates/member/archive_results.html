@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>
+{% for get_member in get_members %}
+  {{ get_member.id }}
+  {{ get_member.name }}
+  {{ get_member.gender }}
+  {{ get_member.phone_number }}
+  {{ get_member.registration_date }}
+  {{ get_member.birthday }}
+  {{ get_member.belt }}
+  {{ get_member.validity_date }}
+  {{ get_member.validity_count }}
+  {{ get_member.unlimited_count }}
+  {{ get_member.gym }}<br>
+{% endfor %}
+</p>
+{% endblock %}

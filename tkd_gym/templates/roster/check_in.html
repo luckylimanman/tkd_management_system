@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="member_id">输入会员ID</label>
+    <input name="member_id" id="member_id" required><br>
+    <input type="submit" value="查看信息">
+  </form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post"><br>
+<label>姓名</label>
+<input type="text" name="name" value="{{ show_info.name }}"><br>
+<label>性别</label>
+<input type="text" name="gender" value="{{ show_info.gender }}"><br>
+<label>电话号码</label>
+<input type="text" name="phone_number" value="{{ show_info.phone_number }}"><br>
+<label>出生日期</label>
+<input type="text" name="birthday" value="{{ show_info.birthday }}"><br>
+<label>跆拳道段位或级别</label>
+<input type="text" name="belt" value="{{ show_info.belt }}"><br>
+<label>所属道馆</label>
+<input type="text" name="gym" value="{{ show_info.gym }}"><br>
+<input type="submit" value="确认修改">
+</form>
+{% endblock %}

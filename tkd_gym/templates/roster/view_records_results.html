@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>
+{% for get_roster in get_rosters %}
+  {{ get_roster.id }}
+  {{ get_roster.member_id }}
+  {{ get_roster.member_name }}
+  {{ get_roster.training_date }}
+  {{ get_roster.training_gym }}<br>
+{% endfor %}
+</p>
+{% endblock %}

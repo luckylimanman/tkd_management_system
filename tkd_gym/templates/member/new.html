@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}添加会员{% endblock %}</h1>
+{% endblock %}
+
+
+{% block content %}
+  <form method="post">
+    <label for="name">姓名</label>
+    <input name="name" id="name" required><br>
+    <label for="gender">性别</label>
+    <select name="gender">
+    <option name="gender" id="gender" value="男">男</option>
+    <option name="gender" id="gender" value="女">女</option>
+    </select><br>
+    <label for="phone_number">电话号码</label>
+    <input name="phone_number" id="phone_number" required><br>
+    <label for="registration_date">入会日期</label>
+    <input name="registration_date" id="registration_date" required><br>
+    <label for="birthday">出生日期</label>
+    <input name="birthday" id="birthday"><br>
+    <label for="belt">跆拳道段位或级别</label>
+    <select name="belt">
+    <option name="belt" id="belt" value="白带">白带(十级)</option>
+    <option name="belt" id="belt" value="白黄带">白黄带(九级)</option>
+    <option name="belt" id="belt" value="黄带">黄带(八级)</option>
+    <option name="belt" id="belt" value="黄绿带">黄绿带(七级)</option>
+    <option name="belt" id="belt" value="绿带">绿带(六级)</option>
+    <option name="belt" id="belt" value="绿蓝带">绿蓝带(五级)</option>
+    <option name="belt" id="belt" value="蓝带">蓝带(四级)</option>
+    <option name="belt" id="belt" value="蓝红带">蓝红带(三级)</option>
+    <option name="belt" id="belt" value="红带">红带(二级)</option>
+    <option name="belt" id="belt" value="红黑带">红黑带(一级)</option>
+    <option name="belt" id="belt" value="黑带一段">黑带一段</option>
+    <option name="belt" id="belt" value="黑带二段">黑带二段</option>
+    <option name="belt" id="belt" value="黑带三段">黑带三段</option>
+    <option name="belt" id="belt" value="黑带四段">黑带四段</option>
+    <option name="belt" id="belt" value="黑带五段">黑带五段</option>
+    <option name="belt" id="belt" value="黑带六段">黑带六段</option>
+    <option name="belt" id="belt" value="黑带七段">黑带七段</option>
+    <option name="belt" id="belt" value="黑带八段">黑带八段</option>
+    <option name="belt" id="belt" value="黑带九段">黑带九段</option>
+    </select><br>
+    <label for="gym">所属道馆</label>
+    <select name="gym">
+    <option name="gym" id="gym" value="北外">北外</option>
+    <option name="gym" id="gym" value="华电">华电</option>
+    <option name="gym" id="gym" value="民大">民大</option>
+    </select><br>
+    <label for="unlimited_count">按年或按次</label>
+    <select name="unlimited_count">
+    <option name="unlimited_count" id="unlimited_count" value="1">按年</option>
+    <option name="unlimited_count" id="unlimited_count" value="0">按次</option>
+    </select><br>
+    <input type="submit" value="添加">
+  </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <p>{{ get_member_name }}</p>
+  <p>{{ get_member_gender }}</p>
+  <p>{{ get_member_phone }}</p>
+  <form method="post">
+  <label for="training_gym">本次训练道馆</label>
+  <input name="training_gym" id="training_gym" required><br>
+    <input type="submit" value="确认">
+  </form>
+  <form name="input" action="/roster/check_in" method="get">
+    <input type="submit" value="取消"><br>
+  </form>
+{% endblock %}

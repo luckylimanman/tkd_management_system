@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}结果{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form name="input" action="new" method="get">
+<input type="submit" value="组织考试"><br>
+</form>
+<form name="input" action="history" method="get">
+<input type="submit" value="查看历次考级信息"><br>
+</form>
+<form name="input" action="rules" method="get">
+<input type="submit" value="考级得分规则"><br>
+</form>
+{% endblock %}
