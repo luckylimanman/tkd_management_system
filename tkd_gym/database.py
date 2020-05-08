@@ -40,7 +40,7 @@ class Roster(Base):
 
 
 
-engine = create_engine('mysql+mysqlconnector://root:final@localhost:3333/testbase') # noqa
+engine = create_engine('mysql+mysqlconnector://root:final@localhost:3333/tkdbase') # noqa
 
 Base.metadata.create_all(bind=engine)
 
