@@ -12,7 +12,7 @@ class Member(Base):
     __tablename__ = 'member'
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
-    gender = Column(Enum("男", "女"))
+    gender = Column(Enum("Male", "Female"))
     phone_number = Column(String(50))
     registration_date = Column(Date)
     birthday = Column(Date)
@@ -40,7 +40,7 @@ class Roster(Base):
 
 
 
-engine = create_engine('mysql+mysqlconnector://root:final@localhost:3333/tkdbase') # noqa
+engine = create_engine('mysql+mysqlconnector://root:final@mysql:3306/testbase') # noqa
 
 Base.metadata.create_all(bind=engine)
 

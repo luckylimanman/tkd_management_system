@@ -1,0 +1,3 @@
+Flask
+sqlalchemy
+mysql-connector
