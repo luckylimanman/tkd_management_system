@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+    db:
+        image: mysql:5.7.22
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: final
+            MYSQL_DATABASE: testbase
+        # ports:
+        #     - "3333:3306"
+    web:
+        build: .
+        restart: always
+        command: flask run --host=0.0.0.0
+        # volumes:
+        #     - ".:/service/tkd_management_system/"
+        links:
+            - "db:mysql"
+        ports:
+            - "5000:5000"
+        depends_on:
+            - db
+    # admin:
+    #     image: adminer
+    #     ports:
+    #         - "8080:8080"
